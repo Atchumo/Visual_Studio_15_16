@@ -8,6 +8,7 @@ namespace TP_B3_EPSI_2015.Controllers
 {
     public class AlbumController : Controller
     {
+
         // GET: Album
         public ActionResult Index()
         {
@@ -17,12 +18,15 @@ namespace TP_B3_EPSI_2015.Controllers
         // GET: Album/Details/5
         public ActionResult Details(int id)
         {
+
             return View();
         }
 
         // GET: Album/Create
         public ActionResult Create()
         {
+            
+
             return View();
         }
 
