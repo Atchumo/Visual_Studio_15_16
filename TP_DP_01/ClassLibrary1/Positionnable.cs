@@ -8,6 +8,6 @@ namespace ClassLibrary1
 {
     interface IPositionnable
     {
-
+       
     }
 }
