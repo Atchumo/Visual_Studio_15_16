@@ -7,11 +7,11 @@ namespace TP_B3_EPSI_2015.Models
 {
     public class Album
     {
-        public int id { get; set; }
-        public string titre { get; set; }
-        public string auteur { get; set; }
-        public string genre { get; set; }
-        public int annee_sortie { get; set; }
+        public int Id { get; set; }
+        public string Titre { get; set; }
+        public string Auteur { get; set; }
+        public string Genre { get; set; }
+        public int Annee { get; set; }
 
 
     }

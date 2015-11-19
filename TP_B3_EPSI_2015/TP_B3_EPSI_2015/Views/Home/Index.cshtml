@@ -1,10 +1,8 @@
-﻿
+﻿@model List<TP_B3_EPSI_2015.Models.Album>
 
 @{
     ViewBag.Title = "Home Page";
 }
-
-@model List<TP_B3_EPSI_2015.Models.Album>
 
 <h2>Liste des albums</h2>
 
@@ -12,9 +10,9 @@
     @foreach (var a in Model)
     {
         <div class="col-md-4">
-            <h3>@a.titre</h3>
-            <div class="label label-info">@a.auteur</div>
-            <p>@a.genre - @a.annee_sortie</p>
+            <h3>@a.Titre</h3>
+            <div class="label label-info">@a.Auteur</div>
+            <p>@a.Genre - @a.Annee</p>
         </div>
     }
 </div>
