@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TP_B3_EPSI_2015.Models;
+using TP_B3_EPSI_2015.DataAccess_layer;
 
 namespace TP_B3_EPSI_2015.Controllers
 {
@@ -11,7 +13,12 @@ namespace TP_B3_EPSI_2015.Controllers
         // GET: Album
         public ActionResult Index()
         {
-            return View();
+            List<Album> liste;
+            using (var db = new DataAccess_layer.DataAccess())
+            {
+                liste = db.Liste();
+            }
+            return View(liste);
         }
 
         // GET: Album/Details/5
@@ -28,12 +35,14 @@ namespace TP_B3_EPSI_2015.Controllers
 
         // POST: Album/Create
         [HttpPost]
-        public ActionResult Create(AlbumController album)
+        public ActionResult Create(Album a)
         {
             try
             {
-                // TODO: Add insert logic here
-
+                using (var db = new DataAccess())
+                {
+                    db.Create(a);
+                }
                 return RedirectToAction("Index");
             }
             catch

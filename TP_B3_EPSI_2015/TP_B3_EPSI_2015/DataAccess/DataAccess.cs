@@ -8,7 +8,7 @@ using TP_B3_EPSI_2015.Models;
 using MySql.Data.MySqlClient;
 using Dapper;
 
-namespace TP_B3_EPSI_2015.DataAccess
+namespace TP_B3_EPSI_2015.DataAccess_layer
 {
     public class DataAccess : IDisposable
     {
