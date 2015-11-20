@@ -6,94 +6,83 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    public abstract class Figure : IDessinable
+    public abstract class Figure : Dessin, IDessinable
     {
-        private double z;
-        private int b;
-        private double x;
-        private double y;
-        private int r;
-        private int v;
+        protected double x,y,z;
+        protected int r,v,b;
 
-        protected double X
+        public double getX()
         {
-            get
-            {
-                return x;
-            }
-
-            set
-            {
-                x = value;
-            }
+            return x;
         }
-
-        protected double Y
+        public void setX(double x)
         {
-            get
-            {
-                return y;
-            }
-
-            set
-            {
-                y = value;
-            }
+            this.x = x;
         }
-
-        protected double Z
+        public double getY()
         {
-            get
-            {
-                return z;
-            }
-
-            set
-            {
-                z = value;
-            }
+            return y;
         }
-
-        protected int R
+        public void setY(double y)
         {
-            get
-            {
-                return r;
-            }
-
-            set
-            {
-                r = value;
-            }
+            this.y = y;
         }
-
-        protected int V
+        public double getZ()
         {
-            get
-            {
-                return v;
-            }
-
-            set
-            {
-                v = value;
-            }
+            return z;
         }
-
-        protected int B
+        public void setZ(double z)
         {
-            get
-            {
-                return b;
-            }
-
-            set
-            {
-                b = value;
-            }
+            this.z = z;
         }
-
+        public int getR()
+        {
+            return r;
+        }
+        public void setR(int r)
+        {
+            this.r = r;
+        }
+        public int getV()
+        {
+            return v;
+        }
+        public void setV(int v)
+        {
+            this.v = v;
+        }
+        public int getB()
+        {
+            return b;
+        }
+        public void setB(int b)
+        {
+            this.b = b;
+        }
 
         public abstract double calculerSurface();
+        public void deplacer(double new_x, double new_y, double new_z)
+        {
+            this.x = this.x + new_x;
+            this.y = this.y + new_z;
+            this.z = this.z + new_z;
+        }
+        public int compareTo(Figure o)
+        {
+            // TODO Auto-generated method stub
+            if (this.calculerSurface() > o.calculerSurface())
+            { //This > o
+                return 1;
+            }
+            else if (this.calculerSurface() < o.calculerSurface())
+            { //This < o
+                return -1;
+            }
+            else
+            { // This = o
+                return 0;
+            }
+
+        }
     }
 }

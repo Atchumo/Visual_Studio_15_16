@@ -8,5 +8,12 @@ namespace ClassLibrary1
 {
     interface IColoriable
     {
+        int getR();
+        void setR(int r);
+        int getV();
+        void setV(int v);
+        int getB();
+        void setB(int b);
+
     }
 }

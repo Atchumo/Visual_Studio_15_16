@@ -40,10 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Allumable.cs" />
+    <Compile Include="Camera.cs" />
     <Compile Include="Cercle.cs" />
     <Compile Include="Carre.cs" />
     <Compile Include="Coloriable.cs" />
+    <Compile Include="Comparable.cs" />
+    <Compile Include="Dessin.cs" />
     <Compile Include="Dessinable.cs" />
+    <Compile Include="Lumiere.cs" />
     <Compile Include="Positionnable.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="Figure.cs" />
